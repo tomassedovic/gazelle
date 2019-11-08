@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"fmt"
 	"strconv"
@@ -31,7 +32,12 @@ func main() {
 			panic(err)
 		}
 
-		fmt.Println(j)
+		testSuite, err := j.Tests(context.TODO())
+		if err != nil {
+			panic(err)
+		}
+
+		fmt.Println(j, "\t", len(testSuite.TestCases))
 	}
 }
 

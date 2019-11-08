@@ -1,6 +1,6 @@
 ## What
 
-Returns tab-separated build information, ready to be pasted in the CI spreadsheet.
+Returns CI build information.
 
 ## How
 
